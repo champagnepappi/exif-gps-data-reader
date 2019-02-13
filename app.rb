@@ -1,0 +1,3 @@
+require 'exif'
+require 'csv'
+
