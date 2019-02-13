@@ -12,3 +12,6 @@ CSV.open('cli_exif.csv', 'wb' ) do |row|
   end
 end
 
+CSV.foreach("cli_exif.csv") do |row|
+  p row
+end
