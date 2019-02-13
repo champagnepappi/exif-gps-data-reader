@@ -1,7 +1,11 @@
 require 'exif'
 require 'csv'
 
-jpg_files = Dir["./*.jpg"]
+if ARGF.argv.empty?
+  jpg_files = Dir["./*.jpg"]
+else
+  jpg_files = Dir["#{ARGF.argv[0]}/*.jpg"]
+end
 puts jpg_files
 
 CSV.open('cli_exif.csv', 'wb' ) do |row|
